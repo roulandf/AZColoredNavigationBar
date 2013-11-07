@@ -9,7 +9,7 @@
 #import "AZColoredBars.h"
 
 @implementation AZColoredBars
-static CGFloat _intensity = .5f;
+static CGFloat _intensity = .8f;
 
 + (CGFloat)intensity {
     return _intensity;

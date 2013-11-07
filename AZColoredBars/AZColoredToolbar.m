@@ -61,7 +61,7 @@
 ////////////////////////////////////////////////////////////////////////////////////
 
 - (void)setBarTintColor:(UIColor *)barTintColor {
-    if ([super respondsToSelector:@selector(setBarTintColor:)]){
+    if ([[self superclass] instancesRespondToSelector:@selector(setBarTintColor:)]) {
         [super setBarTintColor:barTintColor];
     }
     
