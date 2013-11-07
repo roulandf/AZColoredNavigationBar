@@ -61,7 +61,9 @@
 ////////////////////////////////////////////////////////////////////////////////////
 
 - (void)setBarTintColor:(UIColor *)barTintColor {
-    [super setBarTintColor:barTintColor];
+    if ([super respondsToSelector:@selector(setBarTintColor:)]){
+        [super setBarTintColor:barTintColor];
+    }
     
     if (SYSTEM_VERSION_LESS_THAN(@"7.0") || SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0.3"))
         return;
